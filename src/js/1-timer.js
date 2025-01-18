@@ -32,6 +32,7 @@ const options = {
   }
 
   const datatimePicker = document.querySelector('#datetime-picker');
+  
   const remainingTimes = {
     days: document.querySelector('[data-days]'),
     hours: document.querySelector('[data-hours]'),
@@ -85,8 +86,8 @@ function convertMs(ms) {
       }
       
       const remainingTime = convertMs(selectedDate - Date.now());
-  
       updateRemainingElements(remainingTimes, remainingTime);
+      
     }, 1000);
   });
 
